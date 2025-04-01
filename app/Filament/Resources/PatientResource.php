@@ -256,6 +256,12 @@ class PatientResource extends Resource
         ])
         ->actions([
             Tables\Actions\EditAction::make(),
+
+            Tables\Actions\Action::make('generateCard')
+                ->label('Gerar Ficha')
+                ->icon('heroicon-o-document-text')
+                ->url(fn (Patient $record) => route('patients.card', $record))
+                ->openUrlInNewTab(),
             
             // Botão de ação agrupada para acompanhantes
             Tables\Actions\ActionGroup::make([
