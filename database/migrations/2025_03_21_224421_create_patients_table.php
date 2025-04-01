@@ -13,31 +13,27 @@ return new class extends Migration
     {
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 80);
-            $table->string('social_name', 80)->nullable();
-            $table->string('mother', 80)->nullable();
-            $table->string('father', 80)->nullable();
-            $table->string('breed', 80)->nullable();
-            $table->date('birth_date')->nullable();
-            $table->string('sex', 11)->nullable();
-            $table->char('cpf', 14)->nullable();
-            $table->char('cns', 18)->nullable();
-            $table->string('rg', 15)->nullable();
-            $table->char('uf_rg', 2)->nullable();
-            $table->string('expediter', 15)->nullable();
-            $table->string('marital_status', 13)->nullable();
-            $table->string('nationallity', 50)->nullable();
-            $table->string('naturalness', 80)->nullable();
-            $table->string('uf_naturalness', 2)->nullable();
-            $table->char('phone', 15)->nullable();
-            $table->char('cep', 10)->nullable();
+            $table->string('name', 80);# Nome
+            $table->string('social_name', 80)->nullable();#Nome Social
+            $table->string('breed', 80)->nullable();#Raça
+            $table->date('birth_date')->nullable();#data de aniversário
+            $table->string('sex', 11)->nullable();#Sexo
+            $table->char('cpf', 14)->nullable();#CPF
+            $table->char('cns', 18)->nullable();#CNS
+            $table->string('rg', 15)->nullable();#RG
+            $table->char('uf_rg', 2)->nullable();#Unidade federativa do RG
+            $table->string('expediter', 15)->nullable();#despachante
+            $table->string('marital_status', 13)->nullable();#Estado Civil
+            $table->string('nationallity', 50)->nullable();#Nacionalidade
+            $table->string('naturalness', 80)->nullable();#Naturalidade
+            $table->string('uf_naturalness', 2)->nullable();#UF Naturalidade
+            $table->char('phone', 15)->nullable();#Celular
+            $table->char('cep', 10)->nullable();#CEP
             $table->string('street', 60)->nullable();
             $table->string('complement', 60)->nullable();
             $table->string('district', 30)->nullable();
             $table->string('city', 80)->nullable();
             $table->char('state', 2)->nullable();
-            $table->boolean('death');
-            $table->tinyText('cause')->nullable();
             $table->timestamps();
         });
     }

@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('companions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('patient');
+            $table->unsignedBigInteger('patient_id');
             $table->string('name', 80);
             $table->char('cpf', 14)->nullable();
             $table->char('phone', 15)->nullable();
             $table->string('kinship', 17);
             $table->boolean('active');
-            $table->foreign('patient')->references('id')->on('patients');
+            $table->foreign('patient_id')->references('id')->on('patients');
             $table->timestamps();
         });
     }
