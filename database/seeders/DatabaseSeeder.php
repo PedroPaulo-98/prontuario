@@ -12,6 +12,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call([
+            ReasonsTableSeeder::class,
+            OriginsTableSeeder::class,
+            // Outros seeders podem ser adicionados aqui
+        ]);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

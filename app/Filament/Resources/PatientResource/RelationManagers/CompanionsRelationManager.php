@@ -13,6 +13,11 @@ class CompanionsRelationManager extends RelationManager
 {
     protected static string $relationship = 'companions';
 
+    protected static ?string $navigationLabel = 'Acompanhantes'; // Altera o texto no menu
+    protected static ?string $modelLabel = 'Acompanhante'; // Para uso singular
+    protected static ?string $pluralModelLabel = 'Acompanhantes'; // Para uso plural
+
+
     public function form(Form $form): Form
     {
         return $form

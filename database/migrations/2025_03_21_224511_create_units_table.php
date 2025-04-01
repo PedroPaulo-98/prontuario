@@ -18,10 +18,8 @@ return new class extends Migration
             $table->char('cnes', 7);
             $table->char('cep', 10);
             $table->string('street', 100);
-            $table->string('number', 10);
             $table->string('district', 50);
             $table->string('city', 40);
-            $table->tinyInteger('service_desk');
             $table->boolean('active');
             $table->timestamps();
         });

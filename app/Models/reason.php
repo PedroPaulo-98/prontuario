@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class reason extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'active'
+    ];
 }
